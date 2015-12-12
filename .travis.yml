@@ -77,7 +77,7 @@ before_install:
   - git clone https://github.com/Symbitic/MCM.git ${HOME}/Symbitic/MCM
   - mkdir -p ${HOME}/Symbitic/MCM/build
   - cd ${HOME}/Symbitic/MCM/build
-  - cmake ..
+  - cmake .. -DCMAKE_INSTALL_PREFIX=${HOME}/Mutant
   - cmake --build . --target install
 
 before_script:
@@ -86,6 +86,7 @@ before_script:
   - cmake ${SOURCE_DIR}
     -DCMAKE_BUILD_TYPE=${CMAKE_BUILD_TYPE}
     -DCPACK_GENERATOR=${CPACK_GENERATOR}
+    -DCMAKE_PREFIX_PATH=${HOME}/Mutant
 
 script:
   - cmake --build ${BUILD_DIR} --config ${CMAKE_BUILD_TYPE} --target all
