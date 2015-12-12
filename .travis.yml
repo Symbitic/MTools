@@ -69,10 +69,6 @@ env:
     - CMAKE_BUILD_TYPE="Debug"
     - CMAKE_BUILD_TYPE="Release"
 
-matrix:
-  allow_failures:
-    - os: osx
-
 before_install:
   - git clone https://github.com/Symbitic/MCM.git ${HOME}/Symbitic/MCM
   - mkdir -p ${HOME}/Symbitic/MCM/build
