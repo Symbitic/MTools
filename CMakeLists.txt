@@ -56,3 +56,14 @@ mutant_package(MTools
 
 install(FILES "${CMAKE_CURRENT_BINARY_DIR}/MCoreConfigVersion.cmake"
     DESTINATION ${CMAKECONFIG_INSTALL_DIR})
+
+set(PROJECT_CONTACT "Mutant Engine contributors")
+set(PROJECT_DESCRIPTION "Mutant Engine Tools")
+set(PROJECT_VENDOR "Mutant Engine")
+set(PROJECT_README ${CMAKE_CURRENT_SOURCE_DIR}/README.rst)
+set(PROJECT_LICENSE ${CMAKE_CURRENT_SOURCE_DIR}/COPYING.txt)
+set(PROJECT_LICENSE_NAME "GPLv3")
+set(PROJECT_HOMEPAGE "https://symbitic.github.com/mutant/")
+set(PROJECT_VERSION ${PROJECT_VERSION})
+
+include(CPack)
